@@ -1,0 +1,14 @@
+package com.sistema.veiculos;
+
+public class Moto extends Veiculo {
+    // Construtor
+    public Moto(String marca, String modelo, int ano) {
+        super(marca, modelo, ano);
+    }
+
+    // Implementação obrigatória do método abstrato
+    @Override
+    public void acelerar() {
+        System.out.println(modelo + " " + marca + " está acelerando e empinando a roda dianteira!");
+    }
+}

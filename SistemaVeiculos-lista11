@@ -1,0 +1,31 @@
+package com.sistema.veiculos;
+
+public class SistemaVeiculos {
+
+    public static void main(String[] args) {
+        System.out.println("===== Teste de Polimorfismo de Veículos =====");
+
+        // 1. Instanciar objetos usando a referência mais abstrata (Polimorfismo)
+        Veiculo carro = new Carro("Ford", "Mustang", 2023);
+        Veiculo moto = new Moto("Yamaha", "R1", 2024);
+        Veiculo caminhao = new Caminhao("Scania", "R450", 2022);
+
+        System.out.println("\n--- Veículo 1: Carro ---");
+        // Chama o método concreto da superclasse
+        carro.exibirDetalhes(); 
+        // Chama a implementação específica (do Carro) devido ao Polimorfismo
+        carro.acelerar();       
+
+        System.out.println("\n--- Veículo 2: Moto ---");
+        // Chama o método concreto da superclasse
+        moto.exibirDetalhes(); 
+        // Chama a implementação específica (da Moto)
+        moto.acelerar();       
+
+        System.out.println("\n--- Veículo 3: Caminhão ---");
+        // Chama o método concreto da superclasse
+        caminhao.exibirDetalhes(); 
+        // Chama a implementação específica (do Caminhão)
+        caminhao.acelerar();       
+    }
+}

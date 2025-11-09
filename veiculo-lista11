@@ -1,0 +1,28 @@
+package com.sistema.veiculos;
+
+public abstract class Veiculo {
+    // Atributos
+    protected String marca;
+    protected String modelo;
+    protected int ano;
+
+    // Construtor
+    public Veiculo(String marca, String modelo, int ano) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+
+    // Método Concreto (herdado e compartilhado)
+    public void exibirDetalhes() {
+        System.out.println("--- Detalhes do Veículo ---");
+        // Usa o nome da classe concreta para identificar o tipo
+        System.out.println("Tipo: " + this.getClass().getSimpleName()); 
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Ano: " + ano);
+    }
+
+    // Método Abstrato (deve ser implementado pelas subclasses)
+    public abstract void acelerar();
+}
